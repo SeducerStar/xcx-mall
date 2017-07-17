@@ -1,0 +1,50 @@
+{
+  "pages":[   
+    "pages/component/mall/mall",
+    "pages/component/shop/shop",
+    
+    "pages/component/shopcart/shopcart",
+    "pages/component/personalCenter/personalCenter",
+    "pages/component/myorders/myorders",  
+    "pages/component/shopdetail/shopdetail",
+    "pages/component/myaddress/myaddress",
+    "pages/component/myearning/myearning"
+  ],
+  "window":{
+    "backgroundColor": "#f4f3f3",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Wooma",
+    "navigationBarTextStyle":"black"    
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/component/shop/shop",
+        "text": "积分商城",
+        "iconPath": "./pages/img/mall.png",
+        "selectedIconPath": "./pages/img/inmall.png"
+      },
+      {
+        "pagePath": "pages/component/mall/mall",
+        "text": "分类",
+        "iconPath": "./pages/img/query.png",
+        "selectedIconPath": "./pages/img/inquery.png"
+      },
+      {
+        "pagePath": "pages/component/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "./pages/img/shopcart.png",
+        "selectedIconPath": "./pages/img/inshopcart.png"
+      },
+      {
+        "pagePath": "pages/component/personalCenter/personalCenter",
+        "text": "个人中心",
+        "iconPath": "./pages/img/center.png",
+        "selectedIconPath": "./pages/img/incenter.png"
+      }
+    ],
+    "borderStyle":"white" ,
+    "selectedColor": "#3dd05f"
+  }
+}

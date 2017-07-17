@@ -1,0 +1,51 @@
+<!--pages/myearning/myearning.wxml-->
+<view class="bg-light">
+  <view class="header-title">
+    <text>今天已经完成0个发展，距离奖金翻倍还有10个</text>
+    <text>今天奖金：0元</text>
+  </view>
+  <view class="cell-box m-t">
+    <view class="cell-half padding-v" style="border-right:1px solid #f4f3f3;">
+      <view class="ring">
+        <view>
+          <image mode="aspectFit" src="../../img/people.png" class="m-t-xl img-icon"></image>
+        </view>      
+        <text class="text-white">0人</text>
+      </view>
+    </view>
+    <view class="cell-half padding-v">
+      <view class="ring">
+        <view>
+         <image mode="aspectFit" src="../../img/cash.png" class="m-t-xl img-icon"></image>
+         </view>
+         <text class="m-t text-white">0元</text>
+      </view>
+    </view>
+  </view>
+  <view class="cell-box bg-white m-t">
+    <view class=""><text class="text-red">推广收益</text></view>  
+    <view class="cell-third padding-v" style="border-right:1px solid #f4f3f3;">
+      <view class=""><text>一级订单</text></view>  
+      <view class=""><text>0个0元</text></view>   
+    </view>
+    <view class="cell-third padding-v" style="border-right:1px solid #f4f3f3;">     
+      <view class=""><text>二级订单</text></view>  
+      <view class=""><text>0个0元</text></view>
+    </view>
+    <view class="cell-third padding-v">     
+      <view class=""><text>三级订单</text></view>  
+      <view class=""><text>0个0元</text></view>
+    </view>
+  </view>
+  <view class="cell-box bg-white m-t">
+    <view class="padding-v"><image mode="aspectFit" class="img-icon v-m" src="../../img/money.png"></image> 余额0元</view>
+  </view>
+  <view class="bg-white m-t padding">
+     <button type="warn" size="default"
+         hover-class="other-button-hover">提现到微信</button>
+  </view>
+  <view class="bg-white m-t padding">
+     <button style="padding:0px 10px" type="default" size="default"
+        hover-class="other-button-hover">提现记录</button>
+  </view>
+</view>

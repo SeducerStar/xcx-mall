@@ -1,0 +1,17 @@
+<!--pages/component/myorders/myorders.wxml-->
+<view class="orders-box">
+    <view class="orders">我的订单</view>
+    <view class="orders-list" wx:if="{{item.num > 0}}" wx:for="{{orders}}" wx:key="index">
+        <view class="orders-number">订单编号：{{item.id}}</view>
+        <view class="orders-detail">
+            <image src="{{item.image}}"></image>
+            <view class="">{{item.title}}</view>
+            <view class="">{{item.num}}</view>
+            <text class="orders-status">{{item.detail}}</text>
+        </view>
+        <view class="orders-footer">
+            <text>实付：{{item.price * item.num}}</text>
+            <!--<button size="mini" class="orders-btn" bindtap="payOrders">付款</button>-->
+        </view>
+    </view>
+</view>

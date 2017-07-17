@@ -1,0 +1,41 @@
+<!--pages/shopcart/shopcart.wxml-->
+<view class="main">
+    <navigator url="/pages/component/myaddress/myaddress">
+      <view class="cart-header">
+        <view class="order-icon"></view>
+        <text>{{address.name}} </text>
+        <text>{{address.phone}} </text>
+        <text>{{address.detail}}</text>
+        <text class="cart-toatl-price" bindtap="submit">></text>     
+      </view>
+     </navigator>
+    <view class="cart-margin" wx:if="{{hasList}}">
+        <view class="cart-box">
+            <view class="cart-list"wx:if="{{item.num > 0}}"  wx:for="{{carts}}" wx:key="{{index}}">
+                <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
+                <navigator url="../details/details?id={{item.id}}"><image class="cart-thumb" src="{{item.image}}"></image></navigator>
+                <text class="cart-pro-name">{{item.title}}</text>
+                <text class="cart-pro-price">{{item.price}}积分</text>
+                <view class="cart-count-box">
+                    <text class="cart-count-down" bindtap="minusCount" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.num}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+                </view>
+                <!--<text class="cart-del" bindtap="deleteList" data-index="{{index}}"></text>-->
+                <image class="cart-del"  bindtap="deleteList" data-index="{{index}}"src="../../img/delete.png"></image>
+            </view>
+        </view>
+
+        <view class="cart-footer">
+            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll"/>
+            <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll"/>           
+            <text>全选</text>
+            <text>  共 {{totalPrice}} 积分</text>
+            <text class="cart-btn-text" bindtap="topay">确认兑换</text>              
+        </view>
+    </view>
+    <view class="cart-margin" wx:else>
+        <view class="cart-no-data">购物车是空的哦~</view>
+    </view>
+</view>

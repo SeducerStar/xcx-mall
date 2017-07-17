@@ -1,0 +1,25 @@
+<!--pages/shop/shop.wxml-->
+<view class="">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{goods}}">
+      <swiper-item>
+        <image mode="scaleToFill" src="{{item.image}}" class="img-full"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="">
+  <view class="good">
+        <view class="good-title"><text>最近新品</text></view>
+        <view class="good-box">
+            <view wx:for="{{goods}}" class="good-list">
+                <navigator url="../shopdetail/shopdetail?id={{item.id}}">
+                    <image src="{{item.image}}"></image>
+                    <view class="good-text"><text>{{item.detail}}</text></view>
+                    <view class="good-text"><text>{{item.price}} 积分</text></view>
+                </navigator>
+            </view>      
+        </view>
+    </view>
+</view>
