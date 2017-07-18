@@ -2,13 +2,11 @@
   "pages":[   
     "pages/component/mall/mall",
     "pages/component/shop/shop",
-    
     "pages/component/shopcart/shopcart",
     "pages/component/personalCenter/personalCenter",
     "pages/component/myorders/myorders",  
     "pages/component/shopdetail/shopdetail",
-    "pages/component/myaddress/myaddress",
-    "pages/component/myearning/myearning"
+    "pages/component/myaddress/myaddress"
   ],
   "window":{
     "backgroundColor": "#f4f3f3",

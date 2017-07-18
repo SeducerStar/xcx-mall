@@ -1,10 +1,10 @@
 <!--pages/component/mall/mall.wxml-->
 <view class="">
-  <view class="menu-container" style="height: {{height}}px;">
-  <scroll-view class="menu-left" scroll-y style="height: 100%;" scroll-top="{{scrollTop}}">
-    <view wx:for="{{menu_list}}" data-id="{{item.id}}" data-value="{{item.value}}" bindtap="switchTab" class="menu-left-item {{curIndex === item.id?'activity-menu':''}}">{{item.name}}</view>
+  <view class="menu-container" style="height: {{height}}px;" >
+  <scroll-view class="menu-left" scroll-y style="height: 100%;" scroll-into-view="{{toViewLeft}}"  scroll-top="{{scrollTop}}">
+    <view id="{{item.value}}" wx:for="{{menu_list}}" data-id="{{item.id}}" data-value="{{item.value}}" bindtap="switchTab" class="menu-left-item {{curIndex === item.id?'activity-menu':''}}">{{item.name}}</view>
   </scroll-view>
-  <scroll-view class="menu-right" style="height: 100%;" scroll-into-view="{{toView}}" scroll-y >
+  <scroll-view class="menu-right" style="height: 100%;" scroll-into-view="{{toView}}" scroll-y bindscroll="scroll">
     <view id="{{item.value}}" wx:for="{{menu_list}}">
       <view class="menu-detail-header">{{item.header}}</view>
       <view wx:for="{{item.food}}" class="menu-detail-list">

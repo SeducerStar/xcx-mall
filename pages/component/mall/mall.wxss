@@ -39,6 +39,8 @@
   background: #ec6654;
   padding: 20rpx 5rpx;
   color: #fff;
+  height:50rpx;
+  line-height:50rpx;
 }
 
 .menu-container .menu-right .menu-detail-list {
@@ -47,6 +49,7 @@
   border-bottom: 1px solid #f8f8f8;
   position: relative;
   overflow: hidden;
+  height:120rpx;
 }
 
 .menu-detail-list .menu-detail-content {
